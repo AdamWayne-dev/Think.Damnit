@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0.24407193, b: 0, a: 1}
   m_FlipX: 0
@@ -172,4 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brainLocation: {fileID: 8214235001430654331, guid: 0996c47b891616c4db197dddecf13fa9, type: 3}
-  moveSpeed: 4
+  moveSpeed: 2.5

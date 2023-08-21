@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267e150d198bb504f8ea49f40abff86f, type: 3}
   m_Name: Wave 1
   m_EditorClassIdentifier: 
-  smallMoveSpeed: 3
-  mediumMoveSpeed: 2
-  largeMoveSpeed: 1
   enemyPrefabs:
   - {fileID: 4095330683553182966, guid: ed99c9a6d7f8a8247bd0220a3b45b7cc, type: 3}
   - {fileID: 4095330683553182966, guid: 496705bb1b8ed1645b1dd9a919026366, type: 3}
   - {fileID: 4095330683553182966, guid: 868aac7a4d9d53c4ba19934578b49a1f, type: 3}
+  goodMemoryPrefabs:
+  - {fileID: 5510463040753775346, guid: 52895b903dbbd094bb301f830061df21, type: 3}
+  - {fileID: 5615872461804057856, guid: 314666d095aaf8f4ba68bc865012cac9, type: 3}
+  - {fileID: 2928175239549184749, guid: 85c4626a16f82e4408ec3e8f81eed237, type: 3}
   spawnPointParent: {fileID: 3688050431527367868, guid: 6d15ebc81d1545448be452cbb94521a9, type: 3}
   amountOfEnemies: 20
+  amountOfGoodMemories: 15
   spawnDelay: 1
   spawnDelayVariance: 0.2
   minSpawnTime: 0.3
+  goodMemorySpawnDelay: 1.5
+  goodMemorySpawnDelayVariance: 0.2
+  goodMemoryminSpawnTime: 0.3

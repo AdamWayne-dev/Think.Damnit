@@ -7,7 +7,7 @@ public class FireBullet : MonoBehaviour
 
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] GameObject gunPoint;
-
+    // Add fire delay
     float launchForce = 10f;
     // Start is called before the first frame update
     void Start()

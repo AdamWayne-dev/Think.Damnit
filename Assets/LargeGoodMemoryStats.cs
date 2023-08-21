@@ -2,39 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallEnemyStats : MonoBehaviour
+public class LargeGoodMemoryStats : MonoBehaviour
 {
-    private int health;
-
+    private int ideaBarXp = 5;
     [SerializeField] Transform brainLocation;
 
     [SerializeField] float moveSpeed = 3f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        health = 1;
-    }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, brainLocation.position, moveSpeed * Time.deltaTime);
     }
-
-    void TakeDamage()
-    {
-        health -= 1;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+            // Add xp gain to bar
+        }
         if (collision.tag == ("Bullet"))
         {
-            TakeDamage();
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
+            Destroy(this.gameObject);
         }
     }
+
 }

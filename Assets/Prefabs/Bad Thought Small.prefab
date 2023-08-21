@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5646819956461884969}
   - component: {fileID: 5546613282227484520}
   - component: {fileID: 1291106529524787506}
-  - component: {fileID: 8257834140849669710}
   - component: {fileID: 7382399098988877111}
   m_Layer: 0
   m_Name: Bad Thought Small
@@ -160,20 +159,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8257834140849669710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4095330683553182966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09661d2e6bd160244bafa28abd99d98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brainLocation: {fileID: 8214235001430654331, guid: 0996c47b891616c4db197dddecf13fa9, type: 3}
-  moveSpeed: 3
 --- !u!114 &7382399098988877111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f15792900435bc449f9337eb0f9c502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brainLocation: {fileID: 8214235001430654331, guid: 0996c47b891616c4db197dddecf13fa9, type: 3}
+  moveSpeed: 4.5

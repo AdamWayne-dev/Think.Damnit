@@ -45,4 +45,15 @@ public class ArrowController : MonoBehaviour
         float y = circleCenter.transform.position.y + radius * Mathf.Sin(radians);
         return new Vector3(x, y, 0);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy") 
+        {
+            Destroy(collision.gameObject);
+        }
+        // Add functionality for damage taken
+    }
+
+    //  TODO: Add collision check for "good memories" and add functionality for increasing idea bar
 }

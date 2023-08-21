@@ -5,6 +5,9 @@ using UnityEngine;
 public class MediumEnemyStats : MonoBehaviour
 {
     private int health;
+    [SerializeField] Transform brainLocation;
+
+    [SerializeField] float moveSpeed = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +16,8 @@ public class MediumEnemyStats : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
+    {   
+        transform.position = Vector2.MoveTowards(transform.position, brainLocation.position, moveSpeed * Time.deltaTime);   
     }
 
     void TakeDamage()

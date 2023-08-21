@@ -5,22 +5,29 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Wave Config", fileName = "New Wave Config")]
 public class WaveConfigSO : ScriptableObject
 {
-    [SerializeField] float smallMoveSpeed = 3f;
-    [SerializeField] float mediumMoveSpeed = 2f;
-    [SerializeField] float largeMoveSpeed = 1f;
-
     [SerializeField] List<GameObject> enemyPrefabs;
+    [SerializeField] List<GameObject> goodMemoryPrefabs;
 
     [SerializeField] Transform spawnPointParent;
 
     [SerializeField] int amountOfEnemies;
+    [SerializeField] int amountOfGoodMemories;
     [SerializeField] float spawnDelay = 1f;
     [SerializeField] float spawnDelayVariance = 0f;
     [SerializeField] float minSpawnTime = 0.3f;
 
+    [SerializeField] float goodMemorySpawnDelay = 1f;
+    [SerializeField] float goodMemorySpawnDelayVariance = 0f;
+    [SerializeField] float goodMemoryminSpawnTime = 0.3f;
+
     public int GetAmountOfEnemies()
     {
         return amountOfEnemies;
+    }
+
+    public int GetAmountOfGoodMemories() 
+    { 
+        return amountOfGoodMemories; 
     }
 
     public int GetEnemyCount()
@@ -28,11 +35,21 @@ public class WaveConfigSO : ScriptableObject
         return enemyPrefabs.Count;
     }
 
+    public int GetGoodMemoryCount()
+    {
+        return goodMemoryPrefabs.Count;
+    }
+
     public GameObject GetEnemyPrefab()
     {
         return enemyPrefabs[Random.Range(0, 3)];
     }
-    
+
+    public GameObject GetGoodMemoryPrefab()
+    {
+        return goodMemoryPrefabs[Random.Range(0, 3)];
+    }
+
     public Transform GetRandomSpawnPoint()
     {
         List<Transform> spawnPoints = new List<Transform>();
@@ -42,23 +59,7 @@ public class WaveConfigSO : ScriptableObject
             spawnPoints.Add(child);
         }
 
-        return spawnPoints[Random.Range(0, 23)];
-    }
-
-    
-
-    public float GetSmallMoveSpeed()
-    {
-        return smallMoveSpeed;
-    }
-
-    public float GetMediumMoveSpeed()
-    {
-        return mediumMoveSpeed; 
-    }
-    public float GetLargeMoveSpeed()
-    {
-        return largeMoveSpeed;
+        return spawnPoints[Random.Range(0, spawnPoints.Count)];
     }
 
     public float GetRandomSpawnTime()
@@ -67,5 +68,11 @@ public class WaveConfigSO : ScriptableObject
 
         return Mathf.Clamp(spawnTime, minSpawnTime, float.MaxValue);
     }
-    
+    public float GetRandomGoodMemorySpawnTime()
+    {
+        float spawnTime = Random.Range(goodMemorySpawnDelay - goodMemorySpawnDelayVariance, goodMemorySpawnDelay + goodMemorySpawnDelayVariance);
+
+        return Mathf.Clamp(spawnTime, goodMemoryminSpawnTime, float.MaxValue);
+    }
+
 }

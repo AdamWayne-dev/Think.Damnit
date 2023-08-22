@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4087849292546992236}
   - component: {fileID: 4878423886281383430}
   - component: {fileID: 8159650957515518769}
+  - component: {fileID: 3850299390300061839}
   m_Layer: 0
   m_Name: Large Good Memory
   m_TagString: GoodGuy
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.23290737, g: 0.98039216, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163,3 +164,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brainLocation: {fileID: 8214235001430654331, guid: 0996c47b891616c4db197dddecf13fa9, type: 3}
   moveSpeed: 1.4
+--- !u!114 &3850299390300061839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928175239549184749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8409bcaf4d1dbb4eb900909251b0011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 4169f82b7b266b844bcd3a246f493264, type: 3}
+  - {fileID: 21300000, guid: 27858eaf939bd0c4f9f7ffad239a6db4, type: 3}
+  - {fileID: 21300000, guid: 01285d309e34a7b46874eccfcd8b6572, type: 3}

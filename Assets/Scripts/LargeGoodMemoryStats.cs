@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class LargeGoodMemoryStats : MonoBehaviour
 {
-    private int ideaBarXp = 5;
+    private float ideaBarXp = 5;
     [SerializeField] Transform brainLocation;
-
+    private float xpGiven;
     [SerializeField] float moveSpeed = 3f;
+    private LevelStats stats;
+
+    private void Start()
+    {
+        stats = FindObjectOfType<LevelStats>();
+    }
 
     void Update()
     {
@@ -15,15 +23,19 @@ public class LargeGoodMemoryStats : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(this.gameObject);
-            // Add xp gain to bar
-        }
         if (collision.tag == ("Bullet"))
         {
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            xpGiven += ideaBarXp;
+            stats.UpdateProgressBar(xpGiven);
+            Destroy(this.gameObject);
+        }
+        
     }
 
+    
 }

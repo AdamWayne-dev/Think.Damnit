@@ -17,6 +17,10 @@ public class DestroyBullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        if (collision.gameObject.tag == "GoodGuy")
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 }

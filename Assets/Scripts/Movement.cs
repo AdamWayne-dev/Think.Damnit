@@ -46,14 +46,9 @@ public class ArrowController : MonoBehaviour
         return new Vector3(x, y, 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy") 
-        {
-            Destroy(collision.gameObject);
-        }
+    
         // Add functionality for damage taken
-    }
+    
 
     //  TODO: Add collision check for "good memories" and add functionality for increasing idea bar
 }

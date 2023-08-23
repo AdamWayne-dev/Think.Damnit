@@ -6,11 +6,12 @@ public class MediumEnemyStats : MonoBehaviour
 {
     private int health;
     [SerializeField] Transform brainLocation;
-
+    LevelStats stats;
     [SerializeField] float moveSpeed = 3f;
     // Start is called before the first frame update
     void Start()
     {
+        stats = FindObjectOfType<LevelStats>();
         health = 2;
     }
 
@@ -34,6 +35,12 @@ public class MediumEnemyStats : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+
+        if (collision.tag == ("Player"))
+        {
+            stats.UpdateProgressBar(-health);
+            Destroy(gameObject);
         }
     }
 }

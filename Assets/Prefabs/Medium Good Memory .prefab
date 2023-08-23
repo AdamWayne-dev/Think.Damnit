@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brainLocation: {fileID: 8214235001430654331, guid: 0996c47b891616c4db197dddecf13fa9, type: 3}
+  levelManager: {fileID: 5211626814597759971, guid: f2ea2ad75eadfb14daea90f4a35873a7, type: 3}
   moveSpeed: 2.4
 --- !u!114 &-3895540794392252232
 MonoBehaviour:

@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class MediumEnemyStats : MonoBehaviour
 {
+    private Animator anim;
     private int health;
     [SerializeField] Transform brainLocation;
+    CircleCollider2D circleCollider2D;
     LevelStats stats;
     [SerializeField] float moveSpeed = 3f;
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+        anim.enabled = false;
+        circleCollider2D = GetComponent<CircleCollider2D>();
+        circleCollider2D.enabled = true;
         stats = FindObjectOfType<LevelStats>();
         health = 2;
     }
@@ -30,16 +36,20 @@ public class MediumEnemyStats : MonoBehaviour
     {
         if (collision.tag == ("Bullet"))
         {
+            
             TakeDamage();
             if (health <= 0)
             {
-                Destroy(gameObject);
+                circleCollider2D.enabled = false;
+                anim.enabled = true;
+                Destroy(gameObject, 0.5f);
             }
         }
 
         if (collision.tag == ("Player"))
         {
-            stats.UpdateProgressBar(-health);
+            stats.UpdateProgressBar(-health * 2);
+            stats.ResetFocus();
             Destroy(gameObject);
         }
     }

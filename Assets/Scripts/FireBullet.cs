@@ -6,9 +6,13 @@ public class FireBullet : MonoBehaviour
 {
 
     [SerializeField] GameObject bulletPrefab;
+    [SerializeField] LevelStats stats;
+
     [SerializeField] GameObject gunPoint;
     // Add fire delay
     float launchForce = 10f;
+
+    float currentFocusValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,9 @@ public class FireBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        currentFocusValue = stats.GetFocusLevel();
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
            GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
@@ -32,6 +39,14 @@ public class FireBullet : MonoBehaviour
             Rigidbody2D bulletRigidBody = bullet.GetComponent<Rigidbody2D>();
             // Apply the launch force to the arrow
             bulletRigidBody.AddForce(launchDirection * launchForce, ForceMode2D.Impulse);
+        }
+
+        if (currentFocusValue == 100)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+            }
         }
     }
     

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2179771430815918188}
   - component: {fileID: 9171980711406331660}
   - component: {fileID: 3766274628907107468}
+  - component: {fileID: 6026996482803039612}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Player
@@ -165,3 +166,15 @@ MonoBehaviour:
   arrowPrefab: {fileID: 7346515394086421202, guid: e0e7b5cbf3816f94caf2e3c7d773203e, type: 3}
   radius: 1
   rotationSpeed: 200
+--- !u!114 &6026996482803039612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225979623372264886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b464b301dc08845b7da07b2080bf73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,11 +9,19 @@ public class LargeGoodMemoryStats : MonoBehaviour
     private float ideaBarXp = 5;
     [SerializeField] Transform brainLocation;
     private float xpGiven;
+
+    private Animator anim;
+    CircleCollider2D circleCollider2D;
+
     [SerializeField] float moveSpeed = 3f;
     private LevelStats stats;
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
+        anim.enabled = false;
+        circleCollider2D = GetComponent<CircleCollider2D>();
+        circleCollider2D.enabled = true;
         stats = FindObjectOfType<LevelStats>();
     }
 
@@ -25,13 +33,16 @@ public class LargeGoodMemoryStats : MonoBehaviour
     {
         if (collision.tag == ("Bullet"))
         {
-            Destroy(this.gameObject);
+            circleCollider2D.enabled = false;
+            anim.enabled = true;
+            Destroy(this.gameObject, 0.5f);
         }
 
         if (collision.gameObject.tag == "Player")
         {
             xpGiven += ideaBarXp;
             stats.UpdateProgressBar(xpGiven);
+            stats.UpdateFocusBar(10);
             Destroy(this.gameObject);
         }
         

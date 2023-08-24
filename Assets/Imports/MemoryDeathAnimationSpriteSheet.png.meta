@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 371c98eecc714fc4da687feff990b6fb
+guid: b0c5799b0ef12c94d8a82f04429e0054
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 750
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,7 +134,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MemoryDeathAnimationSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1789
+        width: 800
+        height: 791
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2143354b28338574296ba36af0bcc087
+      internalID: -767776227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MemoryDeathAnimationSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1789
+        width: 800
+        height: 791
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb3b4c451bbaab4e9b380c625036aa4
+      internalID: -1442635189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MemoryDeathAnimationSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 940
+        width: 800
+        height: 791
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c0e4a50940b6f498891b1bb3436b89
+      internalID: -257445558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MemoryDeathAnimationSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 940
+        width: 800
+        height: 791
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c05c90aa01637647ab0ecdf96bbe1b3
+      internalID: -978555320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MemoryDeathAnimationSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 91
+        width: 800
+        height: 791
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd7e2cb390f59b489fa03f25ca45f6d
+      internalID: -1307844087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MemoryDeathAnimationSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 91
+        width: 800
+        height: 791
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c211189cb16e924ba54c78770a1a606
+      internalID: -509263702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +271,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MemoryDeathAnimationSpriteSheet_0: -767776227
+      MemoryDeathAnimationSpriteSheet_1: -1442635189
+      MemoryDeathAnimationSpriteSheet_2: -257445558
+      MemoryDeathAnimationSpriteSheet_3: -978555320
+      MemoryDeathAnimationSpriteSheet_4: -1307844087
+      MemoryDeathAnimationSpriteSheet_5: -509263702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class SmallGoodMemoryStats : MonoBehaviour
 {
     private float ideaBarXp = 2;
+    private Animator anim;
+    CircleCollider2D circleCollider2D;
     [SerializeField] Transform brainLocation;
     private float xpGiven;
     LevelStats stats;
@@ -15,6 +17,10 @@ public class SmallGoodMemoryStats : MonoBehaviour
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
+        anim.enabled = false;
+        circleCollider2D = GetComponent<CircleCollider2D>();
+        circleCollider2D.enabled = true;
         stats = FindObjectOfType<LevelStats>();
     }
     private void Update()
@@ -25,13 +31,16 @@ public class SmallGoodMemoryStats : MonoBehaviour
     {
         if (collision.tag == ("Bullet"))
         {
-            Destroy(this.gameObject);
+            circleCollider2D.enabled = false;
+            anim.enabled = true;
+            Destroy(this.gameObject, 0.5f);
         }
 
         if (collision.gameObject.tag == "Player")
         {
             xpGiven += ideaBarXp;
             stats.UpdateProgressBar(xpGiven);
+            stats.UpdateFocusBar(10);
             Destroy(this.gameObject);          
         }
         

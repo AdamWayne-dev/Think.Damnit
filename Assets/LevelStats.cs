@@ -10,28 +10,38 @@ public class LevelStats : MonoBehaviour
 
     private float maxValue;
     private float minValue;
-  
+
+    private float maxFocusValue;
+    private float minFocusValue;
+
     [SerializeField] Slider slider;
+    [SerializeField] Slider focusSlider;
 
     [SerializeField] TextMeshProUGUI progressText;
+    [SerializeField] TextMeshProUGUI focusText;
     
 
     float newGameProgressValue = 0;
     private float currentValue;
+    private float currentFocusValue;
     // Start is called before the first frame update
     void Start()
     {
         
         currentValue = newGameProgressValue;
+        currentFocusValue = newGameProgressValue;
 
         minValue = slider.minValue;
         maxValue = slider.maxValue;
+        minFocusValue = focusSlider.minValue;
+        maxFocusValue = focusSlider.maxValue;
     }
 
     // Update is called once per frame
     void Update()
     {
         progressText.text = currentValue.ToString() + "%";
+        focusText.text = currentFocusValue.ToString() + "%";
     }
 
     public void UpdateProgressBar(float value)
@@ -49,5 +59,33 @@ public class LevelStats : MonoBehaviour
         }
 
         slider.value = currentValue;
+    }
+
+    public void UpdateFocusBar(float value)
+    {
+        currentFocusValue += value;
+
+        if (currentFocusValue > maxFocusValue)
+        {
+            currentFocusValue = maxFocusValue;
+        }
+
+        if (currentFocusValue < minFocusValue)
+        {
+            currentFocusValue = minFocusValue;
+        }
+
+        focusSlider.value = currentFocusValue;
+    }
+
+    public void ResetFocus()
+    {
+        currentFocusValue = minFocusValue;
+        focusSlider.value = currentFocusValue;
+    }
+
+    public float GetFocusLevel()
+    {
+        return focusSlider.value;
     }
 }

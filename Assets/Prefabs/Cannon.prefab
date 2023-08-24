@@ -97,7 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0738f5baf9305f4e9f777dcac372c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemy: {fileID: 4095330683553182966, guid: 868aac7a4d9d53c4ba19934578b49a1f, type: 3}
   bulletPrefab: {fileID: 1284560456692670719, guid: fec029a071ad2c14799aeea016deb7e2, type: 3}
+  stats: {fileID: 0}
+  brain: {fileID: 225979623372264886, guid: 0996c47b891616c4db197dddecf13fa9, type: 3}
+  shockwaveEffect: {fileID: 8463344983952380544, guid: d61096e0ca8a60a4d95606020b2b8e98, type: 3}
   gunPoint: {fileID: 4393367579882808727}
 --- !u!1 &7346515394086421202
 GameObject:

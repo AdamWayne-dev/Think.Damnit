@@ -8,6 +8,9 @@ public class FireBullet : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] LevelStats stats;
 
+    [SerializeField] GameObject brain;
+    [SerializeField] GameObject shockwaveEffect;
+
     [SerializeField] GameObject gunPoint;
     // Add fire delay
     float launchForce = 10f;
@@ -16,7 +19,8 @@ public class FireBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
+        stats = FindObjectOfType<LevelStats>();
     }
 
     // Update is called once per frame
@@ -41,12 +45,23 @@ public class FireBullet : MonoBehaviour
             bulletRigidBody.AddForce(launchDirection * launchForce, ForceMode2D.Impulse);
         }
 
-        if (currentFocusValue == 100)
+        if (currentFocusValue == 100) 
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-
-            }
+                
+                GameObject shockwave = Instantiate(shockwaveEffect, brain.transform.position, Quaternion.identity);
+                ShockwaveManager shockwaveManager = FindAnyObjectByType<ShockwaveManager>();
+                shockwaveManager.CallShockwave();
+                var clones = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach(var clone in clones)
+                    {
+                      
+                        Destroy(clone, 0.3f);
+                    }
+                
+                Destroy(shockwave, 1f);
+           }
         }
     }
     

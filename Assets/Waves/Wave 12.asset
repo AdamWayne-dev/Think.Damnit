@@ -23,9 +23,9 @@ MonoBehaviour:
   spawnPointParent: {fileID: 3688050431527367868, guid: 6d15ebc81d1545448be452cbb94521a9, type: 3}
   amountOfEnemies: 200
   amountOfGoodMemories: 200
-  spawnDelay: 0.5
-  spawnDelayVariance: 0.5
-  minSpawnTime: 0.5
-  goodMemorySpawnDelay: 0.5
-  goodMemorySpawnDelayVariance: 0.5
-  goodMemoryminSpawnTime: 0.5
+  spawnDelay: 0.3
+  spawnDelayVariance: 0.2
+  minSpawnTime: 0.3
+  goodMemorySpawnDelay: 1
+  goodMemorySpawnDelayVariance: 1
+  goodMemoryminSpawnTime: 1

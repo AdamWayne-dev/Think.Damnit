@@ -47,4 +47,14 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 9cc7171dc5173d34586ec238c8658dc0, type: 2}
   - {fileID: 11400000, guid: 6d0b0fec96ef1ef4a9b140de53216122, type: 2}
+  - {fileID: 11400000, guid: dbb42eea38a186e46813f9717b6c909d, type: 2}
+  - {fileID: 11400000, guid: eda2806d547b3e0458bf530738ee7444, type: 2}
+  - {fileID: 11400000, guid: bfb26698db699484fb4f3ad1a6d9b44a, type: 2}
+  - {fileID: 11400000, guid: a008e5989f2165840b7cfc6e43ae90bf, type: 2}
+  - {fileID: 11400000, guid: 09a6a977eafb0804eb5a0ef9da26dfea, type: 2}
+  - {fileID: 11400000, guid: b8152d7faefefa04c97365d8e0f80649, type: 2}
+  - {fileID: 11400000, guid: c6f00422c0de301438326c78c03d3125, type: 2}
+  - {fileID: 11400000, guid: 32e2ae360a843fc4e8103eb23ca916ae, type: 2}
+  - {fileID: 11400000, guid: fe8dcaa54197dac49a3362ce4f4c746d, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
   timeBetweenWaves: 2

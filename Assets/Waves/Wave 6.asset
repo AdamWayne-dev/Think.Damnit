@@ -21,11 +21,11 @@ MonoBehaviour:
   - {fileID: 5615872461804057856, guid: 314666d095aaf8f4ba68bc865012cac9, type: 3}
   - {fileID: 2928175239549184749, guid: 85c4626a16f82e4408ec3e8f81eed237, type: 3}
   spawnPointParent: {fileID: 3688050431527367868, guid: 6d15ebc81d1545448be452cbb94521a9, type: 3}
-  amountOfEnemies: 35
-  amountOfGoodMemories: 15
+  amountOfEnemies: 20
+  amountOfGoodMemories: 7
   spawnDelay: 0.5
   spawnDelayVariance: 0.1
   minSpawnTime: 0.3
-  goodMemorySpawnDelay: 1.2
-  goodMemorySpawnDelayVariance: 0.3
+  goodMemorySpawnDelay: 2.5
+  goodMemorySpawnDelayVariance: 0.5
   goodMemoryminSpawnTime: 0.3

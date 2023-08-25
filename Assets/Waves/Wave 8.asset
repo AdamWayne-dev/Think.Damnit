@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 267e150d198bb504f8ea49f40abff86f, type: 3}
-  m_Name: Wave 2
+  m_Name: Wave 8
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 4095330683553182966, guid: ed99c9a6d7f8a8247bd0220a3b45b7cc, type: 3}
@@ -21,11 +21,11 @@ MonoBehaviour:
   - {fileID: 5615872461804057856, guid: 314666d095aaf8f4ba68bc865012cac9, type: 3}
   - {fileID: 2928175239549184749, guid: 85c4626a16f82e4408ec3e8f81eed237, type: 3}
   spawnPointParent: {fileID: 3688050431527367868, guid: 6d15ebc81d1545448be452cbb94521a9, type: 3}
-  amountOfEnemies: 10
-  amountOfGoodMemories: 3
-  spawnDelay: 1.5
-  spawnDelayVariance: 0.5
+  amountOfEnemies: 30
+  amountOfGoodMemories: 10
+  spawnDelay: 0.4
+  spawnDelayVariance: 0.2
   minSpawnTime: 0.3
-  goodMemorySpawnDelay: 4.5
-  goodMemorySpawnDelayVariance: 1
+  goodMemorySpawnDelay: 2.4
+  goodMemorySpawnDelayVariance: 0.4
   goodMemoryminSpawnTime: 0.3

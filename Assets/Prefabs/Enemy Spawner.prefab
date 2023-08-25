@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a5bf3f41669fc4fa8bcbba2c868595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  insaneModeTracker: {fileID: 6792285178827562350, guid: d9854236adaed3443b88fac3e1ce8619, type: 3}
   waveConfigs:
   - {fileID: 11400000, guid: 9cc7171dc5173d34586ec238c8658dc0, type: 2}
   - {fileID: 11400000, guid: 6d0b0fec96ef1ef4a9b140de53216122, type: 2}
@@ -56,5 +57,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c6f00422c0de301438326c78c03d3125, type: 2}
   - {fileID: 11400000, guid: 32e2ae360a843fc4e8103eb23ca916ae, type: 2}
   - {fileID: 11400000, guid: fe8dcaa54197dac49a3362ce4f4c746d, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  insaneWaveConfigs:
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
+  - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
   - {fileID: 11400000, guid: 488f23e6c93acfb499a0db3b38cc5471, type: 2}
   timeBetweenWaves: 2

@@ -59,7 +59,7 @@ public class FireBullet : MonoBehaviour
                       
                         Destroy(clone, 0.3f);
                     }
-                
+                stats.ResetFocus();
                 Destroy(shockwave, 1f);
            }
         }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SmallGoodMemoryStats : MonoBehaviour
 {
-    private float ideaBarXp = 2;
+    private float ideaBarXp = 3;
     private Animator anim;
     CircleCollider2D circleCollider2D;
     [SerializeField] Transform brainLocation;

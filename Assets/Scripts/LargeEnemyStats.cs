@@ -6,6 +6,7 @@ public class LargeEnemyStats : MonoBehaviour
 {
     private Animator anim;
     private int health;
+    private int damageDone = 12;
     CircleCollider2D circleCollider2D;
     [SerializeField] Transform brainLocation;
     LevelStats stats;
@@ -48,7 +49,7 @@ public class LargeEnemyStats : MonoBehaviour
 
         if (collision.tag == ("Player"))
         {
-            stats.UpdateProgressBar(-health * 2);
+            stats.UpdateProgressBar(-damageDone);
             stats.ResetFocus();
             Destroy(gameObject);
         }

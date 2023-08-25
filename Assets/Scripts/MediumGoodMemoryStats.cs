@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MediumGoodMemoryStats : MonoBehaviour
 {
-    private float ideaBarXp = 3;
+    private float ideaBarXp = 5;
     [SerializeField] Transform brainLocation;
 
     private Animator anim;

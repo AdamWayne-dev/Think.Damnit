@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brainLocation: {fileID: 8214235001430654331, guid: 0996c47b891616c4db197dddecf13fa9, type: 3}
-  moveSpeed: 2.5
+  moveSpeed: 3.5
 --- !u!114 &-2017502831660868555
 MonoBehaviour:
   m_ObjectHideFlags: 0

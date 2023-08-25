@@ -20,14 +20,15 @@ public class LevelStats : MonoBehaviour
     [SerializeField] TextMeshProUGUI progressText;
     [SerializeField] TextMeshProUGUI focusText;
     
+    LevelManager levelManager;
 
-    float newGameProgressValue = 0;
+    float newGameProgressValue = 10;
     private float currentValue;
     private float currentFocusValue;
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelManager = GetComponent<LevelManager>();
         currentValue = newGameProgressValue;
         currentFocusValue = newGameProgressValue;
 
@@ -42,6 +43,16 @@ public class LevelStats : MonoBehaviour
     {
         progressText.text = currentValue.ToString() + "%";
         focusText.text = currentFocusValue.ToString() + "%";
+
+        if(currentValue <= 0)
+        {
+            levelManager.LoadLose();
+        }
+
+        if(currentValue >= 100)
+        {
+            levelManager.LoadWin();
+        }
     }
 
     public void UpdateProgressBar(float value)

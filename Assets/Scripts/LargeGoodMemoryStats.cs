@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LargeGoodMemoryStats : MonoBehaviour
 {
-    private float ideaBarXp = 5;
+    private float ideaBarXp = 7;
     [SerializeField] Transform brainLocation;
     private float xpGiven;
 

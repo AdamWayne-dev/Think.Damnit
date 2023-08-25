@@ -5,6 +5,7 @@ using UnityEngine;
 public class SmallEnemyStats : MonoBehaviour
 {
     private int health;
+    private int damageDone = 4;
     private Animator anim;
     [SerializeField] Transform brainLocation;
     
@@ -50,7 +51,7 @@ public class SmallEnemyStats : MonoBehaviour
 
         if(collision.tag == ("Player"))
         {
-            stats.UpdateProgressBar(-health * 2);
+            stats.UpdateProgressBar(-damageDone);
             stats.ResetFocus();
             Destroy(gameObject);
         }

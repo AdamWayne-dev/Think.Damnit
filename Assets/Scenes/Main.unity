@@ -1816,6 +1816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2757553251096892651}
   - component: {fileID: 9146096656622954720}
+  - component: {fileID: 9146096656622954721}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1877,6 +1878,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5748993398912711882, guid: e4f124bb1bc124b42a827d8d4034b0fd, type: 3}
+      propertyPath: waveConfigs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748993398912711882, guid: e4f124bb1bc124b42a827d8d4034b0fd, type: 3}
+      propertyPath: waveConfigs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: dbb42eea38a186e46813f9717b6c909d, type: 2}
+    - target: {fileID: 5748993398912711882, guid: e4f124bb1bc124b42a827d8d4034b0fd, type: 3}
+      propertyPath: waveConfigs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: eda2806d547b3e0458bf530738ee7444, type: 2}
+    - target: {fileID: 5748993398912711882, guid: e4f124bb1bc124b42a827d8d4034b0fd, type: 3}
+      propertyPath: waveConfigs.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: bfb26698db699484fb4f3ad1a6d9b44a, type: 2}
+    - target: {fileID: 5748993398912711882, guid: e4f124bb1bc124b42a827d8d4034b0fd, type: 3}
+      propertyPath: waveConfigs.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: a008e5989f2165840b7cfc6e43ae90bf, type: 2}
     - target: {fileID: 8676409074143409994, guid: e4f124bb1bc124b42a827d8d4034b0fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2593,6 +2614,23 @@ MonoBehaviour:
   focusSlider: {fileID: 1710774270}
   progressText: {fileID: 2591685638992947033}
   focusText: {fileID: 724184172}
+--- !u!114 &9146096656622954721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3359938630575340696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7c1467915f5664b8a05db7e3809087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuLevel: 0
+  tutorialStart: 1
+  levelStart: 2
+  winLevel: 3
+  loseLevel: 4
 --- !u!1 &9202571622797054067
 GameObject:
   m_ObjectHideFlags: 0

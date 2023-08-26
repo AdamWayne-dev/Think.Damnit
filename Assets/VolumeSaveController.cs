@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class VolumeSaveController : MonoBehaviour
 {
-    [SerializeField] Slider volumeSlider = null;
-   
+    [SerializeField] Slider volumeSlider;
 
+   
     private void Start()
     {
         
@@ -28,7 +28,7 @@ public class VolumeSaveController : MonoBehaviour
 
         volumeSlider.value = volumeValue;
   
-        AudioListener.volume = volumeValue / 2;
+        AudioListener.volume = volumeValue / 60;
       
     }
 }

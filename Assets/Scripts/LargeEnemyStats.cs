@@ -45,9 +45,8 @@ public class LargeEnemyStats : MonoBehaviour
             {
                 
                 circleCollider2D.enabled = false;
-                anim.enabled = true;
-                gameObject.SetActive(false);
-                Destroy(gameObject, 2f);
+                anim.enabled = true;              
+                Destroy(gameObject, 0.5f);
             }
         }
 

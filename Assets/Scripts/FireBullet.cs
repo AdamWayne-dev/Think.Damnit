@@ -12,6 +12,9 @@ public class FireBullet : MonoBehaviour
     [SerializeField] GameObject shockwaveEffect;
 
     [SerializeField] GameObject gunPoint;
+
+    [SerializeField] AudioSource laserSound;
+    [SerializeField] AudioSource empSound;
     // Add fire delay
     float launchForce = 10f;
 
@@ -31,7 +34,8 @@ public class FireBullet : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
-           GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
+            PlayLaserSound();
+            GameObject bullet = Instantiate(bulletPrefab,transform.position,Quaternion.identity);
 
 
 
@@ -49,7 +53,8 @@ public class FireBullet : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
+                empSound.volume = 0.9f;
+                empSound.Play();
                 GameObject shockwave = Instantiate(shockwaveEffect, brain.transform.position, Quaternion.identity);
                 ShockwaveManager shockwaveManager = FindAnyObjectByType<ShockwaveManager>();
                 shockwaveManager.CallShockwave();
@@ -63,6 +68,12 @@ public class FireBullet : MonoBehaviour
                 Destroy(shockwave, 1f);
            }
         }
+    }
+    public void PlayLaserSound()
+    {
+        laserSound.volume = 0.01f;
+        laserSound.pitch = Random.Range(0.3f, 1f);
+        laserSound.Play();
     }
     
 }

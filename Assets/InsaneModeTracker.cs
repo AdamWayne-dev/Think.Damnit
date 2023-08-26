@@ -18,7 +18,7 @@ public class InsaneModeTracker : MonoBehaviour
     public void SetInsaneStatus()
     {
         insaneModeActive = !insaneModeActive;
-        Debug.Log(insaneModeActive);
+        
     }
 
     public bool GetInsaneStatus()

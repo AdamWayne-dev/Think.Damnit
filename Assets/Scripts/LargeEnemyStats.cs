@@ -11,6 +11,8 @@ public class LargeEnemyStats : MonoBehaviour
     [SerializeField] Transform brainLocation;
     LevelStats stats;
     [SerializeField] float moveSpeed = 3f;
+
+    
     
     void Start()
     {
@@ -41,17 +43,22 @@ public class LargeEnemyStats : MonoBehaviour
             TakeDamage();
             if (health <= 0)
             {
+                
                 circleCollider2D.enabled = false;
                 anim.enabled = true;
-                Destroy(gameObject, 0.5f);
+                gameObject.SetActive(false);
+                Destroy(gameObject, 2f);
             }
         }
 
         if (collision.tag == ("Player"))
         {
+            
             stats.UpdateProgressBar(-damageDone);
-            stats.ResetFocus();
+            stats.ResetFocus();          
             Destroy(gameObject);
         }
     }
+
+    
 }

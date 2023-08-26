@@ -16,6 +16,7 @@ public class LargeGoodMemoryStats : MonoBehaviour
     [SerializeField] float moveSpeed = 3f;
     private LevelStats stats;
 
+  
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -33,6 +34,7 @@ public class LargeGoodMemoryStats : MonoBehaviour
     {
         if (collision.tag == ("Bullet"))
         {
+            
             circleCollider2D.enabled = false;
             anim.enabled = true;
             Destroy(this.gameObject, 0.5f);
@@ -40,6 +42,8 @@ public class LargeGoodMemoryStats : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            
+            
             xpGiven += ideaBarXp;
             stats.UpdateProgressBar(xpGiven);
             stats.UpdateFocusBar(10);
@@ -48,5 +52,5 @@ public class LargeGoodMemoryStats : MonoBehaviour
         
     }
 
-    
+   
 }

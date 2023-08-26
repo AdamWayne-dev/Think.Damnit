@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class LevelStats : MonoBehaviour
 {
 
@@ -19,6 +20,8 @@ public class LevelStats : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI progressText;
     [SerializeField] TextMeshProUGUI focusText;
+
+    [SerializeField] Canvas optionsCanvas;
     
     LevelManager levelManager;
 
@@ -30,7 +33,7 @@ public class LevelStats : MonoBehaviour
     {
         levelManager = GetComponent<LevelManager>();
         currentValue = newGameProgressValue;
-        currentFocusValue = newGameProgressValue;
+        currentFocusValue = 0;
 
         minValue = slider.minValue;
         maxValue = slider.maxValue;
@@ -53,8 +56,25 @@ public class LevelStats : MonoBehaviour
         {
             levelManager.LoadWin();
         }
+
+        ShowOptions();
     }
 
+    public void ShowOptions()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            optionsCanvas.gameObject.SetActive(true);
+            if(optionsCanvas.enabled)
+            {
+                Time.timeScale = 0f;
+            }
+
+            
+        }
+    }
+
+  
     public void UpdateProgressBar(float value)
     {
         currentValue += value;

@@ -28,6 +28,7 @@ public class LevelManager : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(menuLevel);
+        Time.timeScale = 1f;
     }
 
     public void LoadWin()
